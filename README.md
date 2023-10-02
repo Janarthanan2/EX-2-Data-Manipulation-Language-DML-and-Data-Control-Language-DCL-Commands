@@ -87,7 +87,8 @@ select ename from manager where ename like '%S' or ename like 'S%';
 #### Q8) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 ##### QUERY:
 ```SQL
-select ename,designation as "job",deptno,hiredate from manager order by hiredate asc;
+select ename,designation as
+           "job",deptno,hiredate from manager order by hiredate asc;
 ```
 ##### OUTPUT:
 ![image](https://github.com/ROHITJAIND/EX-2-DML-and-DCL-Commands/assets/118707073/14986921-48ae-4049-92a0-7dd1c7d89fe6)
@@ -95,7 +96,8 @@ select ename,designation as "job",deptno,hiredate from manager order by hiredate
 #### Q9) List the Details of Employees who have joined before 30 Sept 81.
 ##### QUERY:
 ```SQL
-select * from manager where hiredate<to_date('1981-09-30','YYYY-MM-DD');
+select * from manager where
+              hiredate<to_date('1981-09-30','YYYY-MM-DD');
 ```
 ##### OUTPUT:
 ![271218808-e43e7182-4761-4e64-b432-0ae4ed69e8b4](https://github.com/ROHITJAIND/EX-2-DML-and-DCL-Commands/assets/118707073/eff2e40c-7097-4719-be3e-9c0876735870)
@@ -137,7 +139,8 @@ select avg(salary) from manager;
 #### Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 ##### QUERY:
 ```SQL
-SELECT designation AS job, COUNT(*) AS num_employees FROM manager GROUP BY designation ORDER BY num_employees DESC;
+SELECT designation AS job, COUNT(*) AS num_employees FROM manager
+              GROUP BY designation ORDER BY num_employees DESC;
 ```
 ##### OUTPUT:
 <img height=10% width=40% src="https://github.com/ROHITJAIND/EX-2-DML-and-DCL-Commands/assets/118707073/faa78ae1-0a9c-4888-b5f5-72213d0833ab">
